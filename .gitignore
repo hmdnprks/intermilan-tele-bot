@@ -1,0 +1,3 @@
+botenv/*
+.vscode/*
+.env
