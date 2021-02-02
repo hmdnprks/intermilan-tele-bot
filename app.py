@@ -147,4 +147,4 @@ if __name__ == '__main__':
     app = TelegramBot()
     app.run(debug=os.environ['debug'])
 
-app = default_app()
+app = bottle.default_app()
