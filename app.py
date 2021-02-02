@@ -31,11 +31,13 @@ class BotHandlerMixin:
 
     def send_message(self, prepared_data):
         message_url = self.BOT_URL + 'sendMessage'
+        print('message', prepared_data)
         requests.post(message_url, json=prepared_data)
 
 
 class TelegramBot(BotHandlerMixin, Bottle):
     BOT_URL = 'https://api.telegram.org/bot{token}/'.format(token=TOKEN)
+    print('bot', BOT_URL)
     headers_api = {
       'x-rapidapi-host': "v3.football.api-sports.io",
       'x-rapidapi-key': API_KEY
@@ -91,6 +93,7 @@ Selamat datang di Bot Inter Milan. Silakan gunakan _command_ berikut :
 
     def post_handler(self):
         data = bottle_request.json
+        print(data)
         answer_data = self.prepare_data_for_answer(data)
         self.send_message(answer_data)
 
