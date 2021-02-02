@@ -1,4 +1,5 @@
 import requests
+import bottle
 from bottle import Bottle, response, request as bottle_request
 import os
 import dotenv
@@ -145,3 +146,5 @@ Statistik :
 if __name__ == '__main__':
     app = TelegramBot()
     app.run(debug=os.environ['debug'])
+
+app = default_app()
