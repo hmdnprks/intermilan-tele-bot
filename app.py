@@ -145,6 +145,6 @@ Statistik :
 
 if __name__ == '__main__':
     app = TelegramBot()
-    app.run(debug=os.environ['debug'])
+    app.run(server=os.environ['server'], debug=os.environ['debug'])
 
 app = bottle.default_app()
