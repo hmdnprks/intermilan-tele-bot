@@ -144,4 +144,4 @@ Statistik :
 
 if __name__ == '__main__':
     app = TelegramBot()
-    app.run(host='localhost', port=8080, debug=os.environ['debug'])
+    app.run(debug=os.environ['debug'])
